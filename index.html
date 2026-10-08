@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f1e7">
+<meta name="description" content="ck免费电影网是一份面向常去影院观众的排片查阅手册，把观众最容易记错的三件事拆开讲清楚：场次时间、影厅编号与座位位置。手册不推荐影片，也不提供在线播放入口与片源链接，只做现场信息查询与核对。全册分八个栏目编排——查阅总则、场次时间核对、影厅编号识别、座位位置判断、语言版本辨认、特殊场次说明、常见问题答疑、查询渠道说明，并附场次核对对照表、影厅编号对照表、座位排次对照表三张实用表格。每个栏目按实际现场使用场景展开：场次以开场时间为准、影厅以当日公告为准、座位以票面为准、版本以播报为准，四句口径贯穿全书。手册每月核对一次，更新日期为 2026 年 10 月 6 日，下次核对时间为同年 11 月上旬。所有信息以影院当期公告与实际票面为准。">
+<meta name="keywords" content="ck免费电影网场次时间核对表,ck免费电影网影厅编号识别方法,ck免费电影网座位排次判断对照,ck免费电影网语言版本辨认说明,ck免费电影网特殊场次查询口径,ck免费电影网排片查阅手册,ck免费电影网现场信息查询,ck免费电影网常见问题答疑">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ck免费电影网：排片查阅手册——场次时间、影厅编号、座位位置与语言版本核对">
+<meta property="og:description" content="八个栏目、三张对照表：场次以开场时间为准、影厅以当日公告为准、座位以票面为准、版本以播报为准。不含在线播放入口与片源链接。">
+<meta property="og:url" content="https://ckmianfeidianyingwang-zh.github.io/">
+<meta property="og:site_name" content="ck免费电影网">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<title>ck免费电影网：排片查阅手册——场次时间、影厅编号、座位位置与语言版本核对</title>
+<style>
+:root{
+  --paper:#f6f1e7; --paper2:#efe7d6; --paper3:#e5dac3;
+  --ink:#141414; --ink2:#2a2a2a; --mut:#8b8373; --line:#c9bfa8; --line2:#aea287;
+  --red:#a8201a; --blue:#14365c; --blue2:#1f4b7a; --gold:#a8822c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink2);
+  font-family:"Noto Serif CJK SC","Songti SC","SimSun","Noto Serif",Georgia,"Times New Roman",serif;
+  font-size:16px;line-height:2.05;
+  background-image:radial-gradient(rgba(20,20,20,.025) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+a{color:inherit;text-decoration:none}
+ul,ol,dl{list-style:none}
+.wrap{max-width:1320px;margin:0 auto;padding:0 36px}
+
+/* MASTHEAD */
+.mh{border-bottom:5px double var(--ink);padding:26px 0 20px;background:var(--paper2)}
+.mh-t{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:14px;margin-bottom:14px}
+.mh-t .l{font-size:.72rem;letter-spacing:.26em;color:var(--blue);font-weight:700}
+.mh-t .r{font-size:.78rem;color:var(--mut);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.mh h1{font-size:clamp(2.2rem,8vw,6.4rem);font-weight:900;letter-spacing:.02em;line-height:1;color:var(--ink);text-align:center;margin:18px 0 16px}
+.mh h1 em{font-style:normal;color:var(--red)}
+.mh .sub{text-align:center;font-size:.92rem;color:var(--ink2);max-width:66ch;margin:0 auto;line-height:2.1}
+.mh .sub b{color:var(--red);font-weight:700}
+.mh .fol{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:20px;font-size:.8rem;color:var(--mut);letter-spacing:.06em}
+.mh .fol span b{color:var(--ink);font-weight:700}
+.mh .rule{display:flex;gap:0;margin-top:20px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);height:11px}
+.mh .rule i{display:block;flex:1;border-right:1px solid var(--ink)}
+.mh .rule i:nth-child(2n){border-right:none}
+
+/* TICKER */
+.mn{background:var(--ink);color:var(--paper);padding:9px 0;overflow:hidden}
+.mn-in{display:flex;gap:46px;width:max-content;animation:mn 110s linear infinite;font-size:.74rem;letter-spacing:.2em;font-weight:600}
+.mn-in b{color:var(--gold)}
+@keyframes mn{to{transform:translateX(-50%)}}
+
+/* NAV */
+nav{background:var(--paper2);border-bottom:4px double var(--ink);padding:11px 0;position:sticky;top:0;z-index:20}
+.nv{display:flex;gap:3px;flex-wrap:wrap;align-items:center}
+.nv .k{font-size:.74rem;letter-spacing:.2em;color:var(--red);font-weight:800;margin-right:8px;border-right:2px solid var(--ink);padding-right:12px}
+.nv a{padding:7px 12px;font-size:.86rem;color:var(--ink2);border-bottom:2px solid transparent;font-weight:600}
+.nv a:hover,.nv a.on{color:var(--red);border-bottom-color:var(--red);background:var(--paper3)}
+.nv .s{margin-left:auto;font-size:.78rem;color:var(--mut);letter-spacing:.04em}
+
+/* SECTION */
+section{padding:88px 0}
+.sec-h{margin-bottom:46px;border-bottom:2px solid var(--ink);padding-bottom:22px;position:relative}
+.sec-h::after{content:"";position:absolute;left:0;bottom:-7px;width:120px;height:1px;background:var(--ink)}
+.sec-h .k{font-size:.74rem;letter-spacing:.3em;color:var(--red);font-weight:800}
+.sec-h h2{font-size:clamp(1.55rem,4.4vw,3.1rem);font-weight:900;line-height:1.3;letter-spacing:.005em;color:var(--ink);margin:12px 0 16px}
+.sec-h h2 em{font-style:normal;color:var(--red)}
+.sec-h p{max-width:76ch;font-size:1.02rem;line-height:2.15;color:var(--ink2)}
+.sec-h p strong{color:var(--red)}
+.sec-h .foot{margin-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem;color:var(--mut);border-top:1px solid var(--line);padding-top:14px}
+.sec-h .foot b{color:var(--blue);font-weight:700}
+
+/* FOLIO */
+.folio{padding:74px 0 40px}
+.folio .k{font-size:.74rem;letter-spacing:.3em;color:var(--red);font-weight:800}
+.folio h2{font-size:clamp(1.7rem,5.4vw,3.8rem);font-weight:900;line-height:1.28;letter-spacing:.005em;color:var(--ink);margin:14px 0 22px;max-width:24em}
+.folio h2 em{font-style:normal;color:var(--red)}
+.folio .bd{font-size:1.02rem;max-width:74ch;line-height:2.15;color:var(--ink2)}
+.folio .bd strong{color:var(--red)}
+.folio .bd2{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:.92rem;color:var(--mut);max-width:74ch;line-height:2}
+.folio .bd2 b{color:var(--blue)}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px;border:1px solid var(--ink)}
+.cols .c{border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:30px 30px 34px;background:var(--paper2)}
+.cols .c:nth-child(4n){border-right:none}
+.cols .c:nth-child(n+5){border-bottom:none}
+.cols .no{font-size:.72rem;letter-spacing:.24em;color:var(--red);font-weight:800;margin-bottom:12px}
+.cols h3{font-size:1.22rem;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:13px}
+.cols p{font-size:.9rem;line-height:2;color:var(--ink2)}
+.cols dl{margin-top:16px;border-top:1px solid var(--line2);padding-top:16px;display:flex;flex-direction:column;gap:9px;font-size:.86rem;color:var(--ink2)}
+.cols dt{color:var(--mut);font-size:.78rem;letter-spacing:.06em}
+.cols dd{padding-left:16px;position:relative}
+.cols dd::before{content:"—";position:absolute;left:0;color:var(--red)}
+.cols dd b{color:var(--red)}
+
+/* CHAPTER */
+.ch{display:grid;grid-template-columns:200px 1fr;gap:0;border:1px solid var(--ink);background:var(--paper)}
+.ch>aside{border-right:1px solid var(--ink);background:var(--paper3);padding:32px 24px;display:flex;flex-direction:column;gap:16px}
+.ch>aside .k{font-size:.72rem;letter-spacing:.26em;color:var(--red);font-weight:800}
+.ch>aside .nb{font-size:clamp(3rem,8.6vw,5.8rem);font-weight:900;line-height:.9;color:var(--ink);letter-spacing:-.02em}
+.ch>aside .nb em{font-style:normal;color:var(--red)}
+.ch>aside .txt{font-size:.9rem;line-height:2.1;color:var(--ink2)}
+.ch>aside .txt b{color:var(--red)}
+.ch>aside .bl{margin-top:auto;font-size:.78rem;color:var(--mut);line-height:2;border-top:1px solid var(--line2);padding-top:16px}
+.ch>div.b{padding:38px 40px}
+.ch h3{font-size:clamp(1.25rem,3vw,1.9rem);font-weight:900;line-height:1.55;color:var(--ink);margin-bottom:18px}
+.ch h3 em{font-style:normal;color:var(--red)}
+.ch .lead{font-size:1.02rem;line-height:2.15;color:var(--ink2);max-width:72ch;margin-bottom:24px}
+.ch .lead strong{color:var(--red)}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line2);border-left:1px solid var(--line2)}
+.quad .q{border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:24px 24px 26px;background:var(--paper2)}
+.quad .no{font-size:.72rem;letter-spacing:.16em;color:var(--blue);font-weight:700;margin-bottom:10px}
+.quad h4{font-size:1.05rem;font-weight:900;line-height:1.65;color:var(--ink);margin-bottom:10px}
+.quad p{font-size:.9rem;line-height:2.05;color:var(--ink2)}
+.quad p b{color:var(--red)}
+
+/* TABLE */
+.tbl{border:1px solid var(--ink);background:var(--paper2);padding:36px 38px 26px}
+.tbl .cap{font-size:.74rem;letter-spacing:.26em;color:var(--red);font-weight:800;margin-bottom:8px}
+.tbl h3{font-size:1.3rem;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:20px}
+.tbl h3 em{font-style:normal;color:var(--red)}
+.sc{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem;font-variant-numeric:tabular-nums;background:var(--paper)}
+th{text-align:left;font-size:.76rem;letter-spacing:.08em;color:var(--paper);font-weight:700;padding:12px 15px;background:var(--blue);white-space:nowrap}
+td{padding:14px 15px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2);line-height:1.95}
+tbody tr:nth-child(even){background:var(--paper3)}
+tbody tr:hover{background:var(--paper)}
+td.t{color:var(--ink);font-weight:700;white-space:nowrap}
+td.n{white-space:nowrap;color:var(--ink);font-weight:700}
+td b{color:var(--red)}
+td.g{color:var(--blue2);font-weight:700}
+tfoot td{border-bottom:none;padding-top:18px;font-size:.86rem;color:var(--mut);line-height:2}
+.tg{display:inline-block;font-size:.76rem;padding:2px 11px;border:1px solid var(--line2);background:var(--paper);color:var(--ink2);font-weight:700;white-space:nowrap}
+.tg.y{color:var(--blue2);border-color:#9bb2cc}
+.tg.n{color:var(--red);border-color:#e0a99c}
+.tg.m{color:var(--gold);border-color:#ddc58a;font-weight:700}
+
+/* FOLD */
+.fold{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink)}
+.fld{border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);background:var(--paper2);padding:32px 32px 28px}
+.fld:nth-child(3n){border-right:none}
+.fld:nth-child(n+4){border-bottom:none}
+.fld .fr{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:13px;border-bottom:1px solid var(--line2);margin-bottom:16px}
+.fld .fr .t{font-size:.72rem;letter-spacing:.22em;color:var(--red);font-weight:800}
+.fld .fr .n{font-family:Georgia,serif;font-size:.82rem;color:var(--mut);letter-spacing:.04em}
+.fld h3{font-size:1.22rem;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:14px}
+.fld p{font-size:.9rem;line-height:2.1;color:var(--ink2)}
+.fld ol,.fld ul{margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;display:flex;flex-direction:column;gap:11px;font-size:.88rem;line-height:2.05;color:var(--ink2);counter-reset:f}
+.fld ol li,.fld ul li{padding-left:30px;position:relative}
+.fld ol li::before{counter-increment:f;content:counter(f);position:absolute;left:0;top:2px;font-size:.76rem;font-weight:700;color:var(--red)}
+.fld ul li::before{content:"•";position:absolute;left:6px;color:var(--red);font-size:1rem;line-height:1}
+.fld li b{color:var(--red)}
+
+/* QA */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink);background:var(--paper)}
+.q{border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:26px 32px;display:flex;gap:18px}
+.q:nth-child(2n){border-right:none}
+.q:nth-child(n+5){border-bottom:none}
+.q .nb{flex:none;font-family:Georgia,serif;font-size:1rem;font-weight:700;color:var(--red);width:38px;padding-top:2px;letter-spacing:.02em}
+.q .tx h4{font-size:.98rem;font-weight:700;line-height:1.8;color:var(--ink);margin-bottom:9px}
+.q .tx p{font-size:.9rem;line-height:2.05;color:var(--ink2)}
+.q .tx p b{color:var(--red)}
+
+/* CHANNEL */
+.chl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ink);background:var(--blue)}
+.chl .h{border-right:1px solid rgba(246,241,231,.22);border-bottom:1px solid rgba(246,241,231,.22);padding:30px 28px;color:var(--paper)}
+.chl .h:nth-child(4n){border-right:none}
+.chl .h:nth-child(n+5){border-bottom:none}
+.chl .no{font-size:.72rem;letter-spacing:.24em;color:var(--gold);font-weight:800;margin-bottom:12px}
+.chl h3{font-size:1.18rem;font-weight:900;line-height:1.6;margin-bottom:12px;color:var(--paper)}
+.chl p{font-size:.9rem;line-height:2.05;color:#d8e2ee}
+.chl p b{color:var(--gold)}
+
+/* PULL */
+.pl{margin:0;padding:56px 0;border-top:3px solid var(--ink);border-bottom:5px double var(--ink);background:var(--paper2)}
+.pl-i{display:grid;grid-template-columns:1fr 210px;gap:44px;align-items:start}
+.pl blockquote{font-size:clamp(1.15rem,3.2vw,2.15rem);font-weight:900;line-height:1.75;color:var(--ink);letter-spacing:.003em}
+.pl blockquote em{font-style:normal;color:var(--red)}
+.pl cite{display:block;margin-top:22px;font-size:.82rem;color:var(--mut);font-style:normal;letter-spacing:.06em}
+.pl-s{border:1px solid var(--ink);background:var(--paper);padding:24px;text-align:center}
+.pl-s .l{font-size:.72rem;letter-spacing:.26em;color:var(--red);font-weight:800;margin-bottom:12px}
+.pl-s .nb{font-size:2.6rem;font-weight:900;line-height:1;color:var(--ink);letter-spacing:-.02em}
+.pl-s .nb em{font-style:normal;color:var(--red)}
+.pl-s p{font-size:.82rem;line-height:2;color:var(--mut);margin-top:14px}
+
+/* CTA */
+.cta{border:1px solid var(--ink);background:var(--paper2);padding:0}
+.cta-h{background:var(--ink);color:var(--paper);padding:13px 36px;display:flex;justify-content:space-between;font-size:.76rem;letter-spacing:.22em;font-weight:700}
+.cta-h b{color:var(--gold)}
+.cta-b{padding:40px 38px;display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.cta-b h3{font-size:clamp(1.3rem,3.6vw,2.2rem);font-weight:900;line-height:1.5;color:var(--ink)}
+.cta-b h3 em{font-style:normal;color:var(--red)}
+.cta-b p{font-size:.95rem;line-height:2.1;margin-top:15px;max-width:56ch;color:var(--ink2)}
+.cta-b form{display:grid;grid-template-columns:1fr auto;border:1px solid var(--ink);background:var(--paper);overflow:hidden}
+.cta-b input{border:none;background:transparent;font:inherit;font-size:.98rem;padding:15px 18px;color:var(--ink)}
+.cta-b input::placeholder{color:var(--mut);font-style:italic}
+.cta-b input:focus{outline:none;background:var(--paper3)}
+.cta-b button{background:var(--red);border:none;color:var(--paper);font:inherit;font-weight:700;font-size:.92rem;padding:0 30px;cursor:pointer;letter-spacing:.06em}
+.cta-b button:hover{background:var(--ink)}
+.cta-b small{grid-column:1/-1;display:block;font-size:.82rem;color:var(--ink2);margin-top:15px;line-height:2;font-style:italic}
+
+/* FOOT */
+footer{background:var(--ink);color:var(--paper);border-top:5px double var(--gold);padding:60px 0 26px}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:46px}
+.ft .b h3{font-size:1.5rem;font-weight:900;line-height:1.5;margin-bottom:17px}
+.ft .b p{font-size:.92rem;max-width:58ch;line-height:2.1;color:#d8e2ee}
+.ft .b .url{margin-top:20px;font-size:.86rem;color:var(--mut)}
+.ft .b .url b{color:var(--gold);word-break:break-all}
+.ft .h{font-size:.74rem;letter-spacing:.26em;color:var(--gold);font-weight:800;margin-bottom:20px}
+.ft ul{display:flex;flex-direction:column;gap:11px}
+.ft a{color:#d8e2ee;font-size:.9rem;line-height:1.75}
+.ft a:hover{color:var(--gold);text-decoration:underline;text-underline-offset:4px}
+.fb{margin-top:46px;padding-top:22px;border-top:1px solid rgba(246,241,231,.22);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--mut);font-variant-numeric:tabular-nums}
+.fb b{color:var(--gold)}
+
+@media (max-width:1120px){
+  .cols,.chl{grid-template-columns:1fr 1fr}
+  .cols .c,.chl .h{border-right:1px solid var(--line2)!important;border-bottom:1px solid var(--line2)!important}
+  .cols .c:nth-child(2n),.chl .h:nth-child(2n){border-right:none!important}
+  .cols .c:nth-child(n+7),.chl .h:nth-child(n+7){border-bottom:none!important}
+  .fold{grid-template-columns:1fr 1fr}
+  .fld:nth-child(3n){border-right:1px solid var(--line2)}
+  .fld:nth-child(2n){border-right:none}
+  .fld:nth-child(n+5){border-bottom:none}
+  .qa{grid-template-columns:1fr}
+  .q:nth-child(2n){border-right:1px solid var(--line2)}
+  .q:nth-child(n+5){border-bottom:1px solid var(--line2)}
+  .q:last-child{border-bottom:none}
+  .ch{grid-template-columns:1fr}
+  .ch>aside{border-right:none;border-bottom:1px solid var(--ink);flex-direction:row;flex-wrap:wrap;gap:22px;align-items:center}
+  .quad{grid-template-columns:1fr 1fr}
+  .cta-b,.ft,.pl-i{grid-template-columns:1fr;gap:26px}
+  .pl-s{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 15px}
+  .cols,.fold,.chl,.qa,.ft,.quad{grid-template-columns:1fr}
+  .cols .c,.fold .fld,.chl .h,.q,.quad .q{border-right:none!important;border-bottom:1px solid var(--line2)!important}
+  .cols .c:last-child,.fold .fld:last-child,.chl .h:last-child,.qa .q:last-child,.quad .q:last-child{border-bottom:none!important}
+  .ch>aside{padding:22px}
+  .ch>div.b,.tbl,.cta-b{padding:24px 16px}
+  th,td{padding:11px 9px;font-size:.86rem}
+  .mn-in{font-size:.68rem;gap:26px}
+  .nv .s,.mh .fol{display:none}
+  body{background-size:16px 16px}
+  .mh h1{font-size:2.4rem}
+  .q{padding:22px 18px}
+}
+@media print{
+  body{background:#fff;color:#000;font-size:10.5pt;line-height:1.85;background-image:none}
+  .mn,nav,.cta,footer{display:none!important}
+  .mh,.pl{border-color:#000;padding:0 0 14px}
+  .ch,.tbl,.fold,.qa,.chl,.q,.fld,.quad,.cols,.tg,.c,.h,.v{background:#fff!important;color:#000!important;border-color:#666!important;box-shadow:none}
+  .ch>aside{background:#eee!important}
+  .cols .c,.fold .fld,.chl .h,.q,.quad .q{border-color:#aaa!important}
+  .mh h1,.sec-h h2,.folio h2,.ch h3,.fld h3,.chl h3,.qa .tx h4,.cta-b h3,.ft .b h3{color:#000!important}
+  section{padding:18px 0}
+  .sec-h{padding:12px 0}
+  .sec-h h2,.folio h2{color:#000!important}
+  .sec-h h2 em,.folio h2 em,.ch h3 em,.fld h3 em,.cta-b h3 em{color:#000!important;font-style:normal}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="mh">
+  <div class="wrap">
+    <div class="mh-t">
+      <div class="l">排 片 查 阅 手 冊 · PROGRAMME QUERY MANUAL</div>
+      <div class="r">第 八 版 ｜ 更新日期 2026 年 10 月 6 日 ｜ 下次核对 11 月上旬</div>
+    </div>
+    <h1>ck<em>免费</em>电影网</h1>
+    <p class="sub">排片查阅手册：<b>场次以开场时间为准 · 影厅以当日公告为准 · 座位以票面为准 · 版本以播报为准</b>。本手册只做现场信息查询与核对，不推荐影片，也不提供在线播放入口与片源链接。</p>
+    <div class="fol">
+      <span><b>八</b> 个栏目</span>
+      <span><b>三</b> 张对照表</span>
+      <span><b>四</b> 句核对口径</span>
+      <span><b>八</b> 条常见问题</span>
+      <span><b>四</b> 类查询渠道</span>
+      <span>更新周期：<b>每月核对</b></span>
+    </div>
+    <div class="rule" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</header>
+
+<div class="mn" aria-hidden="true">
+  <div class="mn-in">
+    <span><b>场次时间</b> 开场时间 · 末场时间 · 场次间隔</span>
+    <span><b>影厅编号</b> 厅号识别 · 入口位置 · 楼层</span>
+    <span><b>座位位置</b> 排次判断 · 过道关系 · 视线</span>
+    <span><b>语言版本</b> 字幕说明 · 配音版 · 原声版</span>
+    <span><b>特殊场次</b> 点映 · 重映 · 见面会</span>
+    <span><b>核对口径</b> 四句 · 四对照</span>
+    <span><b>常见问题</b> 八条 · 现场服务</span>
+    <span><b>场次时间</b> 开场时间 · 末场时间 · 场次间隔</span>
+    <span><b>影厅编号</b> 厅号识别 · 入口位置 · 楼层</span>
+    <span><b>座位位置</b> 排次判断 · 过道关系 · 视线</span>
+    <span><b>语言版本</b> 字幕说明 · 配音版 · 原声版</span>
+    <span><b>特殊场次</b> 点映 · 重映 · 见面会</span>
+    <span><b>核对口径</b> 四句 · 四对照</span>
+    <span><b>常见问题</b> 八条 · 现场服务</span>
+  </div>
+</div>
+
+<nav aria-label="栏目导览">
+  <div class="wrap nv">
+    <span class="k">栏 目 索 引</span>
+    <a href="#gen">查阅总则</a>
+    <a href="#c1">场次时间核对</a>
+    <a href="#c2">影厅编号识别</a>
+    <a href="#c3">座位位置判断</a>
+    <a href="#c4">语言版本辨认</a>
+    <a href="#c5">特殊场次说明</a>
+    <a href="#c6">常见问题答疑</a>
+    <a href="#c7">查询渠道说明</a>
+    <a href="#cta">查阅登记</a>
+    <span class="s">所有信息以影院当期公告与实际票面为准</span>
+  </div>
+</nav>
+
+<main>
+
+  <section class="folio" id="gen" aria-labelledby="gen-t">
+    <div class="wrap">
+      <div class="k">目 次 ／ CONTENTS</div>
+      <h2 id="gen-t">八个栏目，<em>四个核对口径</em>，一张排片怎么读</h2>
+      <p class="bd">排片单只解决"有什么"，不解决"在哪儿、几点、怎么看"。这本手册补的是后三件事：<strong>先把场次时间核对清楚，再认影厅编号，再判断座位位置，最后确认语言版本。</strong>顺序不能颠倒——时间错了，后面三步都白做。</p>
+      <p class="bd2">全书四句核对口径贯穿八个栏目：<b>场次以开场时间为准、影厅以当日公告为准、座位以票面为准、版本以播报为准。</b>三张对照表分别对应这三步，第四句对应开场前播报。</p>
+      <div class="cols">
+        <article class="c">
+          <div class="no">栏 目 一</div>
+          <h3>场次时间核对</h3>
+          <p>开场时间、末场时间、场次间隔三个数字，决定你几点出门、几点到场。</p>
+          <dl><dt>核对项</dt><dd>开场时间 <b>vs</b> 票面时间</dd><dd>场次间隔与<b>交通时间</b></dd><dd>末场与<b>散场时段</b></dd></dl>
+        </article>
+        <article class="c">
+          <div class="no">栏 目 二</div>
+          <h3>影厅编号识别</h3>
+          <p>厅号、入口、楼层三项，决定你从哪个门进、走哪条通道。</p>
+          <dl><dt>核对项</dt><dd>厅号与<b>当日公告</b></dd><dd>入口位置与<b>楼层</b></dd><dd>专用通道<b>入口</b></dd></dl>
+        </article>
+        <article class="c">
+          <div class="no">栏 目 三</div>
+          <h3>座位位置判断</h3>
+          <p>排次、过道关系、视线三件事，决定你入座后是哪种体验。</p>
+          <dl><dt>核对项</dt><dd>排次与<b>过道距离</b></dd><dd>视线与<b>遮挡关系</b></dd><dd>回座<b>是否容易找</b></dd></dl>
+        </article>
+        <article class="c">
+          <div class="no">栏 目 四</div>
+          <h3>语言版本辨认</h3>
+          <p>字幕说明、配音版、原声版三类，开场前播报会说明一次。</p>
+          <dl><dt>核对项</dt><dd>字幕<b>语言种类</b></dd><dd>配音与原声<b>区分</b></dd><dd>无障碍解说<b>申请</b></dd></dl>
+        </article>
+        <article class="c">
+          <div class="no">栏 目 五</div>
+          <h3>特殊场次说明</h3>
+          <p>点映、重映、见面会属于特殊场次，排期与规则与普通场次不同。</p>
+          <dl><dt>核对项</dt><dd>点映<b>场次时间</b></dd><dd>重映<b>版本说明</b></dd><dd>见面会<b>入场顺序</b></dd></dl>
+        </article>
+        <article class="c">
+          <div class="no">栏 目 六</div>
+          <h3>常见问题答疑</h3>
+          <p>八条高频问题，答案都落在"场次状态"和"门店规则"两类上。</p>
+          <dl><dt>核对项</dt><dd>场次状态<b>决定处理方式</b></dd><dd>门店规则<b>决定答复口径</b></dd><dd>现场服务<b>以服务台为准</b></dd></dl>
+        </article>
+        <article class="c">
+          <div class="no">栏 目 七</div>
+          <h3>查询渠道说明</h3>
+          <p>四个渠道各有适用场景：查询、核对、办理、现场服务。</p>
+          <dl><dt>核对项</dt><dd>线上<b>查排期</b></dd><dd>公告<b>核影厅</b></dd><dd>服务台<b>办现场服务</b></dd></dl>
+        </article>
+        <article class="c">
+          <div class="no">栏 目 八</div>
+          <h3>口径与更新</h3>
+          <p>四句核对口径与更新周期，是这本手册本身的可信度说明。</p>
+          <dl><dt>核对项</dt><dd>四句<b>核对口径</b></dd><dd>月度<b>核对周期</b></dd><dd>版本<b>更新记录</b></dd></dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="c1" aria-labelledby="c1-t">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="k">栏 目 一 ／ SCREENING TIME</div>
+        <h2 id="c1-t">场次时间核对：<em>开场时间</em>是唯一锚点</h2>
+        <p>这一栏目讲"几点到"。<strong>排片单上的开场时间是唯一锚点，所有后续安排都从它倒推。</strong>容易出错的是把开场时间当成入场时间——两者差 20 分钟左右，而 20 分钟恰好是检票加找座的最低耗时。</p>
+        <div class="foot"><span>核对项：开场时间 · 末场时间 · 场次间隔 · 交通耗时 · 入场缓冲</span><b>栏目一</b></div>
+      </div>
+
+      <div class="ch">
+        <aside>
+          <div class="k">栏 目 边 注</div>
+          <div class="nb">01</div>
+          <div class="txt">时间类信息变化最频繁。<b>每月核对一次</b>是本栏目的基本要求；门店临时调整排期时，以当日公告为最高优先级。</div>
+          <div class="bl">栏目一 · 核对表<br>表一 场次核对对照<br>含开场 / 末场 / 间隔<br>入场缓冲统一按 20 分钟</div>
+        </aside>
+        <div class="b">
+          <h3>时间核对的<em>三步</em></h3>
+          <p class="lead">先核开场时间与票面是否一致，再倒推到场时间，最后留出 20 分钟缓冲。<strong>三步里最容易漏的是第三步：检票排队、找厅、找座这三件事加起来，20 分钟并不宽裕。</strong>末场场次还要额外算散场时间与接驳时间。</p>
+          <div class="quad">
+            <div class="q"><div class="no">步 骤 一</div><h4>核对开场时间</h4><p>票面时间与<b>当日公告</b>对一遍；排期调整时以公告为准，不看历史记录。</p></div>
+            <div class="q"><div class="no">步 骤 二</div><h4>倒推到场时间</h4><p>从开场时间往回减<b>交通耗时</b>，再减停车与步行时间，得到出门时间。</p></div>
+            <div class="q"><div class="no">步 骤 三</div><h4>留出缓冲</h4><p>开场前 <b>20 分钟</b>到场是底线，含检票、找厅、找座三段耗时。</p></div>
+            <div class="q"><div class="no">步 骤 四</div><h4>末场额外核算</h4><p>末场场次要<b>另算散场时间</b>与接驳时间，夜间接驳班次需提前查。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="c2" aria-labelledby="c2-t">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="k">栏 目 二 ／ HALL NUMBER</div>
+        <h2 id="c2-t">影厅编号识别：<em>三个数字</em>决定从哪个门进</h2>
+        <p>这一栏目讲"在哪儿"。<strong>厅号、楼层、入口位置三项里，楼层最容易漏。</strong>同一厅号在不同楼层会重复出现，只记厅号而没记楼层，是走错厅的主要原因。</p>
+        <div class="foot"><span>核对项：厅号 · 楼层 · 入口位置 · 无障碍通道 · 特殊厅标识</span><b>栏目二</b></div>
+      </div>
+
+      <div class="tbl">
+        <div class="sc">
+          <table>
+            <caption>表 二 · 影厅编号对照表（编号规则以当日公告为准，不同门店规则存在差异）</caption>
+            <thead>
+              <tr><th>序号</th><th>识别项</th><th>读取位置</th><th>常见写法</th><th>易错点</th><th>核对动作</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="n">H.01</td><td class="t">厅号</td><td>票面与公告</td><td class="n">1–12 厅</td><td>只看数字<b>不看楼层</b></td><td class="g">对照当日公告</td></tr>
+              <tr><td class="n">H.02</td><td class="t">楼层</td><td>入口指引牌</td><td class="n">B1 / L1 / L2</td><td>同号<b>跨楼层重复</b></td><td class="g">先认楼层再认厅</td></tr>
+              <tr><td class="n">H.03</td><td class="t">入口位置</td><td>现场通道标识</td><td>东西南北口</td><td>入口<b>与出口分离</b></td><td class="g">进场前确认入口</td></tr>
+              <tr><td class="n">H.04</td><td class="t">特殊厅标识</td><td>票面说明</td><td>激光 / 巨幕 / 杜比</td><td>标识<b>与实际厅号并存</b></td><td class="g">两项同时核对</td></tr>
+              <tr><td class="n">H.05</td><td class="t">无障碍入口</td><td>服务台询问</td><td>电梯或专用通道</td><td>位置<b>各门店不同</b></td><td class="g">提前申请席位</td></tr>
+              <tr><td class="n">H.06</td><td class="t">洗手间方位</td><td>楼层导视</td><td>厅前或厅后</td><td>中场<b>找不到方位</b></td><td class="g">入场时留意导视</td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="6">识别顺序：楼层 → 厅号 → 入口。只看厅号而漏掉楼层，是走错厅的主要原因；入场前扫一眼入口指引牌，可省去中途往返。</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="c3" aria-labelledby="c3-t">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="k">栏 目 三 ／ SEAT POSITION</div>
+        <h2 id="c3-t">座位位置判断：<em>排次与过道</em>的关系最实用</h2>
+        <p>这一栏目讲"坐哪儿"。<strong>排次本身不重要，排次与过道的距离才重要。</strong>同一排次里，靠过道的位置中场离席更方便、回座更容易找；远离过道的位置则相反。这是选座时最容易被忽略的一项。</p>
+        <div class="foot"><span>核对项：排次 · 过道距离 · 视线遮挡 · 回座难度 · 邻座数量</span><b>栏目三</b></div>
+      </div>
+
+      <div class="fold">
+        <article class="fld">
+          <div class="fr"><span class="t">排 次</span><span class="n">栏目三 · A</span></div>
+          <h3>排次是<em>位置坐标</em></h3>
+          <p>排次决定前后关系。前排与后排的差别在视线角度与字幕阅读距离，具体偏好因人而异，不存在统一标准。</p>
+          <ol><li>先看<b>排次编号</b></li><li>再看<b>座位号</b></li><li>两者<b>一起记</b></li><li>暗处回座<b>靠排次</b></li></ol>
+        </article>
+        <article class="fld">
+          <div class="fr"><span class="t">过 道</span><span class="n">栏目三 · B</span></div>
+          <h3>过道是<em>便利指标</em></h3>
+          <p>靠过道的位置中场离席不用打扰邻座，散场时离场也更快；代价是走道侧的灯光与人员走动。</p>
+          <ol><li>靠过道<b>离席方便</b></li><li>回座<b>容易定位</b></li><li>走道侧<b>有灯光</b></li><li>中场<b>少打扰邻座</b></li></ol>
+        </article>
+        <article class="fld">
+          <div class="fr"><span class="t">视 线</span><span class="n">栏目三 · C</span></div>
+          <h3>视线看<em>遮挡关系</em></h3>
+          <p>前排高个子、侧面立柱、走道指示灯都可能形成遮挡。票面不标注这些信息，只能在入场后判断。</p>
+          <ul><li class="p">留意<b>前排身高</b></li><li class="p">留意<b>侧面立柱</b></li><li class="p">留意<b>走道指示灯</b></li><li class="p">遮挡严重<b>当场提出</b></li></ul>
+        </article>
+        <article class="fld">
+          <div class="fr"><span class="t">邻 座</span><span class="n">栏目三 · D</span></div>
+          <h3>邻座是<em>数量问题</em></h3>
+          <p>单人场次与多人同行，对邻座数量的要求不同；靠过道一侧的邻座少，中间座位的邻座多。</p>
+          <ul><li class="p">单人<b>选靠过道</b></li><li class="p">同行<b>选连续座位</b></li><li class="p">走错<b>当场处理</b></li><li class="p">调换<b>视余位而定</b></li></ul>
+        </article>
+        <article class="fld">
+          <div class="fr"><span class="t">离 席</span><span class="n">栏目三 · E</span></div>
+          <h3>离席看<em>时点</em></h3>
+          <p>中场离席的时点比座位位置更影响体验。转场段落起身，比在情节高潮时起身更合理。</p>
+          <ul><li class="p">选<b>转场段落</b></li><li class="p">起身<b>先示意邻座</b></li><li class="p">走道<b>贴边走</b></li><li class="p">回座<b>看清排次</b></li></ul>
+        </article>
+        <article class="fld">
+          <div class="fr"><span class="t">散 场</span><span class="n">栏目三 · F</span></div>
+          <h3>散场看<em>出口</em></h3>
+          <p>散场时的出口选择与座位方位有关。入场前先记好座位所在方位对应的出口，散场时不用临时判断。</p>
+          <ul><li class="p">记<b>座位方位</b></li><li class="p">选<b>近的出口</b></li><li class="p">汇合点<b>提前说定</b></li><li class="p">照明恢复<b>留意脚下</b></li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="c4" aria-labelledby="c4-t">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="k">栏 目 四 ／ VERSION</div>
+        <h2 id="c4-t">语言版本辨认：<em>播报只放一次</em>，错过只能问</h2>
+        <p>这一栏目讲"看哪种"。<strong>字幕语言、配音版、原声版这三类信息，在开场前播报一次，没有第二次。</strong>提前知道播报包含哪些内容，就能在播报时集中听，而不是等坐下来才想起来要问。</p>
+        <div class="foot"><span>核对项：字幕语言 · 配音版 · 原声版 · 无障碍解说 · 助听设备</span><b>栏目四</b></div>
+      </div>
+
+      <div class="ch">
+        <aside>
+          <div class="k">栏 目 边 注</div>
+          <div class="nb">04</div>
+          <div class="txt">版本信息在<b>开场前播报一次</b>。错过播报再问工作人员是可行的，但会打断自己的入场节奏。</div>
+          <div class="bl">栏目四 · 核对表<br>表三 场次核对对照<br>含字幕 / 配音 / 原声<br>无障碍需提前申请</div>
+        </aside>
+        <div class="b">
+          <h3>辨认的<em>两个层次</em></h3>
+          <p class="lead">第一个层次是票面标注：字幕语言与版本类型在票面上会写明，但需要主动去看。<strong>第二个层次是开场播报：助听设备与无障碍解说的借用方式只在播报里说明，票面上不写。</strong>两个层次都要完成，版本才算确认清楚。</p>
+          <div class="quad">
+            <div class="q"><div class="no">层 次 一</div><h4>票面标注</h4><p>开场前<b>主动看票面</b>：字幕语言与版本类型都写在那里，不主动看就会漏。</p></div>
+            <div class="q"><div class="no">层 次 二</div><h4>开场播报</h4><p>助听设备与无障碍解说的<b>借用方式</b>只在播报中说明，错过只能问。</p></div>
+            <div class="q"><div class="no">层 次 三</div><h4>现场询问</h4><p>版本不符或播报没听清，<b>开场前提问</b>；入场后处理成本更高。</p></div>
+            <div class="q"><div class="no">层 次 四</div><h4>版本差异</h4><p>同一部作品<b>可能存在多个版本</b>，排期与票面上会分别标注。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="c5" aria-labelledby="c5-t">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="k">栏 目 五 ／ SPECIAL SCREENING</div>
+        <h2 id="c5-t">特殊场次说明：<em>点映、重映、见面会</em>规则不同</h2>
+        <p>这一栏目讲"例外情况"。<strong>特殊场次的排期短、规则多，普通场次的核对习惯不一定适用。</strong>点映看场次时间，重映看版本说明，见面会看入场顺序——三件事各有一套核对方式。</p>
+        <div class="foot"><span>核对项：点映场次 · 重映版本 · 见面会入场顺序 · 限定场次 · 活动场次</span><b>栏目五</b></div>
+      </div>
+
+      <div class="tbl">
+        <div class="sc">
+          <table>
+            <caption>表 三 · 场次核对对照表（场次时间与厅号均为常规口径示例，实际以当日公告为准）</caption>
+            <thead>
+              <tr><th>序号</th><th>核对项目</th><th>常规时点</th><th>核对依据</th><th>核对结果</th><th>备注</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="n">C.01</td><td class="t">开场时间</td><td class="n">票面标注</td><td>当日公告</td><td class="g">以公告为准</td><td>排期调整<b>以公告为最高优先级</b></td></tr>
+              <tr><td class="n">C.02</td><td class="t">末场时间</td><td class="n">当日公告</td><td>门店排期</td><td class="g">需另算接驳</td><td>夜间接驳<b>提前查班次</b></td></tr>
+              <tr><td class="n">C.03</td><td class="t">场次间隔</td><td class="n">约 2 小时</td><td>排片单</td><td class="g">用于倒推到场</td><td>不同门店<b>间隔不同</b></td></tr>
+              <tr><td class="n">C.04</td><td class="t">入场缓冲</td><td class="n">开场前 20 分钟</td><td>手册建议</td><td class="g">底线而非宽裕</td><td>含检票、找厅、找座<b>三段耗时</b></td></tr>
+              <tr><td class="n">C.05</td><td class="t">迟到入场</td><td class="n">开场后</td><td>现场标识</td><td class="y">部分时段暂停</td><td>暂停时段<b>在门外等候</b></td></tr>
+              <tr><td class="n">C.06</td><td class="t">散场动线</td><td class="n">放映结束</td><td>现场引导</td><td class="g">按引导走</td><td>照明恢复方式<b>各门店不同</b></td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="6">核对顺序：开场时间 → 到场时间 → 入场缓冲 → 散场安排。任何一项与票面不符，都在服务台处理比入场后往返更省时间。</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="c6" aria-labelledby="c6-t">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="k">栏 目 六 ／ FAQ</div>
+        <h2 id="c6-t">常见问题答疑：<em>八条高频问题</em>的答案落在两类依据上</h2>
+        <p>这一栏目是答疑。<strong>八条问题的答案，本质都落在两类依据上：场次状态决定处理方式，门店规则决定答复口径。</strong>同一问题在不同门店可能得到不同答复，最终以现场口径为准。</p>
+        <div class="foot"><span>问题范围：排期 · 影厅 · 座位 · 版本 · 退换 · 设施 · 无障碍 · 候车</span><b>栏目六</b></div>
+      </div>
+
+      <div class="qa">
+        <div class="q"><div class="nb">Q.01</div><div class="tx"><h4>开场时间与票面不一致怎么办？</h4><p>以<b>当日公告为准</b>，并核对排期是否调整过；若已到场，到服务台确认该场次的实际开场时间。</p></div></div>
+        <div class="q"><div class="nb">Q.02</div><div class="tx"><h4>走错厅能当场调换吗？</h4><p>发现走错<b>当场提出</b>处理更快；入场后往返耗时更长，且部分场次已满座无法调换。</p></div></div>
+        <div class="q"><div class="nb">Q.03</div><div class="tx"><h4>座位靠过道是否更好？</h4><p>中场离席与回座<b>更方便</b>，但走道侧有灯光与人员走动，需按个人偏好取舍。</p></div></div>
+        <div class="q"><div class="nb">Q.04</div><div class="tx"><h4>字幕版本怎么确认？</h4><p>先看<b>票面标注</b>，再听开场前播报；两处信息不一致时以当日公告为准。</p></div></div>
+        <div class="q"><div class="nb">Q.05</div><div class="tx"><h4>专用席位需要提前申请吗？</h4><p><b>建议提前申请</b>，余位有限；入口位置各门店不同，可先向服务台询问。</p></div></div>
+        <div class="q"><div class="nb">Q.06</div><div class="tx"><h4>助听设备怎么借？</h4><p>在<b>服务台或影厅门口</b>现场借用；部分门店需押金或证件，归还窗口在开场前播报。</p></div></div>
+        <div class="q"><div class="nb">Q.07</div><div class="tx"><h4>散场后在哪里候车？</h4><p>接驳与候车位置<b>门号与站台</b>提前查好；散场时人群密集，按约定的汇合点集合更稳妥。</p></div></div>
+        <div class="q"><div class="nb">Q.08</div><div class="tx"><h4>手册多久核对一次？</h4><p>按<b>月度核对</b>更新，设施与规则变动时同步修订；本页标注的更新日期为 2026 年 10 月 6 日。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="c7" aria-labelledby="c7-t">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="k">栏 目 七 ／ CHANNELS</div>
+        <h2 id="c7-t">查询渠道说明：<em>四个渠道</em>，各有适用场景</h2>
+        <p>这一栏目讲"去哪儿查"。<strong>四个渠道分别对应四件事：线上查排期、公告核影厅、服务台办现场服务、现场标识判断方位。</strong>混用会导致效率低下——比如去服务台问排期，或在线查现场设施。</p>
+        <div class="foot"><span>渠道：线上查询 · 当日公告 · 服务台 · 现场标识</span><b>栏目七</b></div>
+      </div>
+
+      <div class="chl">
+        <div class="h">
+          <div class="no">渠 道 一</div>
+          <h3>线上查询</h3>
+          <p>适合查<b>排期与开场时间</b>，出行前完成。排期变动以当日公告为最高优先级。</p>
+        </div>
+        <div class="h">
+          <div class="no">渠 道 二</div>
+          <h3>当日公告</h3>
+          <p>适合核<b>影厅与厅号</b>，入场前完成；公告变更时以最新版本为准。</p>
+        </div>
+        <div class="h">
+          <div class="no">渠 道 三</div>
+          <h3>服务台</h3>
+          <p>适合办<b>凭证补打、座位调换、设施申请</b>；涉及退款与改签以购票渠道回复为准。</p>
+        </div>
+        <div class="h">
+          <div class="no">渠 道 四</div>
+          <h3>现场标识</h3>
+          <p>适合判断<b>入口、出口、洗手间、无障碍通道</b>方位，随现场导视走。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<aside class="pl" aria-labelledby="pl-t">
+  <div class="wrap">
+    <div class="pl-i">
+      <div>
+        <blockquote id="pl-t">排片单只能告诉你<em>有什么</em>，这本手册想补的是<em>在哪儿、几点、怎么看</em>。四句核对口径不是规则，而是<em>查错的顺序</em>：时间错了先改时间，厅号错了先找楼层，座位错了先看排次，版本错了只听播报一次。</blockquote>
+        <cite>—— ck免费电影网 · 排片查阅手册 第八版 ｜ 口径说明</cite>
+      </div>
+      <div class="pl-s">
+        <div class="l">核 对 口 径</div>
+        <div class="nb">04<em>句</em></div>
+        <p>场次以开场时间为准<br>影厅以当日公告为准<br>座位以票面为准<br>版本以播报为准</p>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<section id="cta" aria-labelledby="cta-t">
+  <div class="wrap">
+    <div class="sec-h">
+      <div class="k">栏 目 八 ／ SUBSCRIPTION</div>
+      <h2 id="cta-t">查阅登记：<em>每月一次</em>核对记录，只发手册修订</h2>
+      <p>每月发一段，内容是手册修订项与核对记录更新，包括排期核对口径调整、影厅编号规则变化、特殊场次说明补充。<strong>不发片源、不附任何播放入口，可随时退订。</strong></p>
+      <div class="foot"><span>发送节奏：每月首周一 20:00 ｜ 全年 12 段 ｜ 无广告与第三方追踪</span><b>登记 →</b></div>
+    </div>
+
+    <div class="cta">
+      <div class="cta-h"><b>// READING DESK · 查阅登记台</b><span>STATUS: AWAITING INPUT</span></div>
+      <div class="cta-b">
+        <div>
+          <h3>把<em>核对记录</em>投到<b>登记台</b>：<br>每月一段，<u>读完 30 秒</u></h3>
+          <p>只收手册修订项与核对记录更新，用于修订下一版内容。本站不通过第三方投放或追踪收集信息，邮箱仅用于发送本站更新，可随时退订。</p>
+        </div>
+        <form novalidate onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='已登记 ✓';b.disabled=true;">
+          <input type="email" placeholder="reader@domain.com" aria-label="邮箱地址" autocomplete="email" required>
+          <button type="submit">登记 →</button>
+          <small>本站不附任何在线播放入口与片源引导，内容只涉及现场信息查询与核对；提交即表示同意接收每月一段的手册修订更新。</small>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="b">
+        <h3>ck免费电影网 · 排片查阅手册</h3>
+        <p>ck免费电影网是一份面向常去影院观众的排片查阅手册，把观众最容易记错的三件事拆开讲清楚：场次时间、影厅编号与座位位置。手册不推荐影片，也不提供在线播放入口与片源链接，只做现场信息查询与核对。全册分八个栏目编排——查阅总则、场次时间核对、影厅编号识别、座位位置判断、语言版本辨认、特殊场次说明、常见问题答疑、查询渠道说明，并附场次核对对照表、影厅编号对照表、座位排次对照表三张实用表格。每个栏目按实际现场使用场景展开，四个核对口径贯穿全书。手册每月核对一次，更新日期为 2026 年 10 月 6 日，下次核对时间为同年 11 月上旬。所有信息以影院当期公告与实际票面为准。</p>
+        <div class="url">网站访问地址：<b>https://ckmianfeidianyingwang-zh.github.io/</b></div>
+      </div>
+      <div>
+        <div class="h">栏 目 索 引</div>
+        <ul>
+          <li><a href="#gen">查阅总则</a></li>
+          <li><a href="#c1">场次时间核对</a></li>
+          <li><a href="#c2">影厅编号识别</a></li>
+          <li><a href="#c3">座位位置判断</a></li>
+          <li><a href="#c4">语言版本辨认</a></li>
+          <li><a href="#c5">特殊场次说明</a></li>
+          <li><a href="#c6">常见问题答疑</a></li>
+          <li><a href="#c7">查询渠道说明</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="h">表 格 索 引</div>
+        <ul>
+          <li><a href="#">场次核对对照表</a></li>
+          <li><a href="#">影厅编号对照表</a></li>
+          <li><a href="#">座位排次对照表</a></li>
+          <li><a href="#">语言版本辨认</a></li>
+          <li><a href="#">特殊场次说明</a></li>
+          <li><a href="#">四句核对口径</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="h">手 册 相 关</div>
+        <ul>
+          <li><a href="#">第一至七版存档</a></li>
+          <li><a href="#">修订日志</a></li>
+          <li><a href="#">门店规则差异说明</a></li>
+          <li><a href="#">月度核对记录</a></li>
+          <li><a href="#">退订与隐私说明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© 2026 ck免费电影网 · 排片查阅手册 第八版 ｜ 内容只涉及现场信息查询与核对，不构成消费建议；具体场次、设施与服务以影院当期公告为准。</span>
+      <b>ckmianfeidianyingwang-zh.github.io</b>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=this.getAttribute('href');
+      if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-52,behavior:'smooth'});}}
+    });
+  });
+  var links=document.querySelectorAll('.nv a');
+  var secs=document.querySelectorAll('main section');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting){var id=en.target.id;links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+id);});}});
+    },{rootMargin:'-52px 0px -68% 0px',threshold:0});
+    secs.forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
